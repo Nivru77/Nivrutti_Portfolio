@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <!-- <link rel="stylesheet" href=""> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* background-image: none; */
+            background-color: lightskyblue;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 75px;
+            background-color: rgb(60, 60, 160);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(90, 144, 171);
+            font-size: 1.03rem;
+        }
+
+        main hr{
+            border: 0;
+            background-color: rgb(114, 114, 215);
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 130px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+
+        }
+
+        .leftSection {
+            font-size: 2rem;
+        }
+
+        .leftSection .buttons{
+            padding: 50px 0;
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            background-color: rgb(187, 138, 225);
+            color: white;
+            border: 2px solid white;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .rightSection img {
+            width: 80%;
+        }
+
+        .purple {
+            color: aquamarine;
+        }
+
+        #element {
+            color: aqua;
+        }
+
+        .secondSection{
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1{
+            font-size: 1.9rem;
+        }
+
+        .secondSection .box{
+            background-color: aliceblue;
+            width: 77vh;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+        .secondSection .vertical{
+            height: 93px;
+            width: 1px;
+            background-color: azure;
+            margin: 0 120px;
+        }
+
+        .image-top{
+            width: 23px; 
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .vertical-title{
+            position: relative;
+            top: 75px;
+            width: 150px;
+            font-size: 20px;
+        }
+
+        .vertical-desc{
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 10px;
+
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+          }
+          
+          form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+          }
+          
+          input, textarea, button {
+            margin-bottom: 10px;
+          }
+
+        .footer{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;            
+        }
+
+    </style>
+</head>
+
+<body background="">
+
+    <header>
+
+        <nav>
+            <div class="left">Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <main>
+        <section class="firstSection">
+
+            <div class="leftSection" id="home">
+                Hi!, My name is <span class="purple">Nivrutti</span>
+
+                <div>And I am a passionate About the</div>
+                <span id="element"></span>
+            </div>
+
+
+
+            <div class="rightSection">
+                <img src="bg_img1.png" alt="" width="75%">
+
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="secondSection" id="experience">
+            <h1>Experience</h1> 
+
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="developer.png" alt="">
+                    <div class="vertical-title">FrontEnd Develeoper</div>
+                    <div class="vertical-desc">HTML , CSS , JavaScript</div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="fullstack.png" alt="">
+                    <div class="vertical-title">Full Stack Python </div>
+                    <div class="vertical-desc">HTML , CSS , JavaScript , jQuery , Python , Django Framework</div>
+                </div>
+                 
+            </div>
+
+
+        </section>
+        
+
+    </main>
+
+    <footer id="contact">
+        <p>Contact Me:</p>
+        <form action="contact.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </footer>
+
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+     
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Full Stack Python'],
+            typeSpeed: 50,
+        });
+    </script>
+
+</body>
+
+</html>
